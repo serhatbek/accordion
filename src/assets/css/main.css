@@ -25,6 +25,21 @@ body {
   color: #fff;
 }
 
+.accordion__item.active .accordion__item-title {
+  background-color: #33a0ff;
+}
+
+.accordion__item.active .accordion__item-title .fas {
+  transform: rotate(180deg);
+}
+
+.accordion__item.active .accordion__item-cont {
+  padding: 16px;
+  background-color: #202b2f;
+  line-height: 1.5rem;
+  height: auto;
+}
+
 .accordion__item-title {
   display: flex;
   justify-content: space-between;
@@ -42,22 +57,7 @@ body {
   font-size: 2rem;
 }
 
-.accordion__item-title.active {
-  background-color: #33a0ff;
-}
-
-.accordion__item-title.active .fas {
-  transform: rotate(180deg);
-}
-
 .accordion__item-cont {
   height: 0;
   overflow: hidden;
-}
-
-.accordion__item-cont.active {
-  padding: 16px;
-  background-color: #202b2f;
-  line-height: 1.5rem;
-  height: auto;
 }

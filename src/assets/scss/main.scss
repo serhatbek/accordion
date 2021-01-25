@@ -27,6 +27,21 @@ body {
   width: 800px;
   color: #fff;
 
+  &__item.active &__item-title {
+    background-color: #33a0ff;
+  }
+
+  &__item.active &__item-title .fas {
+    transform: rotate(180deg);
+  }
+
+  &__item.active &__item-cont {
+    padding: 16px;
+    background-color: #202b2f;
+    line-height: 1.5rem;
+    height: auto;
+  }
+
   &__item {
     &-title {
       display: flex;
@@ -45,24 +60,9 @@ body {
       }
     }
 
-    &-title.active {
-      background-color: #33a0ff;
-    }
-
-    &-title.active .fas {
-      transform: rotate(180deg);
-    }
-
     &-cont {
       height: 0;
       overflow: hidden;
-    }
-
-    &-cont.active {
-      padding: 16px;
-      background-color: #202b2f;
-      line-height: 1.5rem;
-      height: auto;
     }
   }
 }
