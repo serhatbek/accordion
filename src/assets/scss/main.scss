@@ -9,13 +9,11 @@
 }
 
 html {
-  // font-size: 62.5%;
   font-size: 16px;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  // font-size: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,12 +24,18 @@ body {
 .accordion {
   width: 800px;
   color: #fff;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+  }
 
   &__item.active &__item-title {
     background-color: #33a0ff;
   }
 
-  &__item.active &__item-title .fas {
+  &__item.active &__item-title > .fas {
     transform: rotate(180deg);
   }
 
@@ -43,26 +47,30 @@ body {
   }
 
   &__item {
+    margin-bottom: 1rem;
     &-title {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #003249;
       padding: 16px;
+      transition: all 0.3s ease-out;
 
       p {
         font-weight: bold;
         letter-spacing: 0.4rem;
       }
 
-      .fas {
+      > .fas {
         font-size: 2rem;
+        transition: all 0.3s ease-out;
       }
     }
 
     &-cont {
       height: 0;
       overflow: hidden;
+      transition: all 0.2s ease-out;
     }
   }
 }
